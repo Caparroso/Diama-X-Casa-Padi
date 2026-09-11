@@ -19,28 +19,23 @@
 
     <main class="registration-shell">
       <section class="event-panel" aria-labelledby="lineup-title">
+        <div class="crowd-background" aria-hidden="true">
+          <img src="./assets/crowd-scan.png" alt="" />
+          <span class="tracking-box tracking-box--one" data-reading="37.73"></span>
+          <span class="tracking-box tracking-box--two" data-reading="36.91"></span>
+          <span class="tracking-box tracking-box--three" data-reading="38.24"></span>
+          <span class="tracking-box tracking-box--four" data-reading="ANALYZING"></span>
+          <span class="ambient-scanline"></span>
+        </div>
+
         <header class="event-meta">
           <p>25 SEPTIEMBRE</p>
           <p>7:30 PM</p>
           <p class="status"><i></i> PRE-REGISTRO DISPONIBLE</p>
         </header>
 
-        <div class="scanner" aria-hidden="true">
-          <div class="scanner__grid"></div>
-          <div class="scanner__figure">
-            <span class="scanner__head"></span>
-            <span class="scanner__body"></span>
-          </div>
-          <div class="face-box">
-            <i></i><i></i><i></i><i></i>
-            <span class="crosshair"></span>
-          </div>
-          <div class="scanline"></div>
-          <p class="metric metric--one">FACE_ID <b data-subject>0031</b></p>
-          <p class="metric metric--two">TEMP <b>37.73</b></p>
-          <p class="metric metric--three">MATCH <b data-match>42.08%</b></p>
-          <p class="metric metric--four">19.4326 / -99.1332</p>
-          <p class="metric metric--alert">NO MATCH</p>
+        <div class="diama-logo">
+          <img src="./assets/diama-logo.png" alt="Diama." />
         </div>
 
         <div class="lineup">
@@ -112,7 +107,7 @@
         <article class="ticket" id="ticket">
           <div class="ticket__noise" aria-hidden="true"></div>
           <header class="ticket__header">
-            <p>ACCESO / PRE-REGISTRO</p>
+            <span class="ticket-logo"><img src="./assets/diama-logo.png" alt="Diama." /></span>
             <p>$80 · PAGA EN PUERTA</p>
           </header>
 

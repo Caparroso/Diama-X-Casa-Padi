@@ -3,8 +3,6 @@ const dialog = document.querySelector('#ticket-dialog');
 const closeTicket = document.querySelector('#close-ticket');
 const nameInput = document.querySelector('#name');
 const instagramInput = document.querySelector('#instagram');
-const subjectLabel = document.querySelector('[data-subject]');
-const matchLabel = document.querySelector('[data-match]');
 const submitButton = form.querySelector('button[type="submit"]');
 const submitLabel = submitButton.querySelector('span');
 const formStatus = document.querySelector('#form-status');
@@ -85,12 +83,4 @@ dialog.addEventListener('close', () => {
 
 dialog.addEventListener('click', (event) => {
   if (event.target === dialog) dialog.close();
-});
-
-document.addEventListener('pointermove', (event) => {
-  const x = event.clientX / Math.max(window.innerWidth, 1);
-  const y = event.clientY / Math.max(window.innerHeight, 1);
-  const confidence = Math.abs(Math.sin(x * 8.2 + y * 5.7)) * 73;
-  subjectLabel.textContent = String(31 + Math.floor(x * 8 + y * 4)).padStart(4, '0');
-  matchLabel.textContent = `${confidence.toFixed(2)}%`;
 });
