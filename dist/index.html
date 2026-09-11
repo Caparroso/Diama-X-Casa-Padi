@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pre-registro para el evento del 25 de septiembre en Pachuca." />
+    <meta name="theme-color" content="#07090b" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2307090b'/%3E%3Cpath d='M8 22V8h14M42 8h14v14M56 42v14H42M22 56H8V42' fill='none' stroke='%2300e5ff' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23ff3b2f'/%3E%3C/svg%3E"
+    />
+    <title>Pre-registro — 25 de septiembre</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <main class="registration-shell">
+      <section class="event-panel" aria-labelledby="lineup-title">
+        <header class="event-meta">
+          <p>25 SEPTIEMBRE</p>
+          <p>7:30 PM</p>
+          <p class="status"><i></i> PRE-REGISTRO DISPONIBLE</p>
+        </header>
+
+        <div class="scanner" aria-hidden="true">
+          <div class="scanner__grid"></div>
+          <div class="scanner__figure">
+            <span class="scanner__head"></span>
+            <span class="scanner__body"></span>
+          </div>
+          <div class="face-box">
+            <i></i><i></i><i></i><i></i>
+            <span class="crosshair"></span>
+          </div>
+          <div class="scanline"></div>
+          <p class="metric metric--one">FACE_ID <b data-subject>0031</b></p>
+          <p class="metric metric--two">TEMP <b>37.73</b></p>
+          <p class="metric metric--three">MATCH <b data-match>42.08%</b></p>
+          <p class="metric metric--four">19.4326 / -99.1332</p>
+          <p class="metric metric--alert">NO MATCH</p>
+        </div>
+
+        <div class="lineup">
+          <p class="micro-label">LINE UP</p>
+          <h1 id="lineup-title">
+            <span>LOOP3</span>
+            <span>L-JO</span>
+            <span>CTRL+ALT+SUPR</span>
+            <span>GRUPO PRECARIO</span>
+            <span class="lineup__b2b">ANDRESESTR3S <small>B2B</small> BREAK MADRE</span>
+          </h1>
+        </div>
+
+        <address class="location">
+          <span>UBICACIÓN</span>
+          Av. Piracantos, Parque de Poblamiento 2a. Secc,<br />
+          Parque de Poblamiento, 42088 Pachuca de Soto, Hgo.
+        </address>
+      </section>
+
+      <section class="form-panel">
+        <div class="form-panel__index" aria-hidden="true">37.73</div>
+        <div class="form-wrap">
+          <header class="form-header">
+            <p>ACCESS_REQUEST</p>
+            <h2>PRE-REGISTRO</h2>
+          </header>
+
+          <div class="prices" aria-label="Precios de acceso">
+            <p><strong>$80</strong><span>CON REGISTRO</span></p>
+            <p><strong>$100</strong><span>EN PUERTA<br />SIN REGISTRO</span></p>
+          </div>
+
+          <form id="registration-form" action="https://formspree.io/f/meaqdwqy" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Pre-registro 25 de septiembre" />
+            <input type="hidden" name="tipo_de_acceso" value="$80 con registro" />
+            <div class="field">
+              <label for="name">NOMBRE</label>
+              <input id="name" name="name" type="text" autocomplete="name" required maxlength="60" placeholder="Escribe tu nombre" />
+              <span class="field__error" id="name-error"></span>
+            </div>
+
+            <div class="field">
+              <label for="instagram">INSTAGRAM</label>
+              <div class="instagram-field">
+                <span aria-hidden="true">@</span>
+                <input id="instagram" name="instagram" type="text" autocomplete="off" required maxlength="30" placeholder="usuario" aria-describedby="instagram-help instagram-error" />
+              </div>
+              <span class="field__help" id="instagram-help">Sin espacios y sin el símbolo @.</span>
+              <span class="field__error" id="instagram-error"></span>
+            </div>
+
+            <button type="submit">
+              <span>GENERAR BOLETO</span>
+              <b aria-hidden="true">↗</b>
+            </button>
+
+            <output class="form-status" id="form-status" role="status" aria-live="polite"></output>
+            <p class="privacy">Tu nombre e Instagram se enviarán a Formspree únicamente para confirmar tu acceso.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="ticket-dialog" id="ticket-dialog" aria-labelledby="ticket-title">
+      <div class="ticket-stage">
+        <article class="ticket" id="ticket">
+          <div class="ticket__noise" aria-hidden="true"></div>
+          <header class="ticket__header">
+            <p>ACCESO / PRE-REGISTRO</p>
+            <p>$80 · REGISTRO</p>
+          </header>
+
+          <div class="ticket__scan" aria-hidden="true">
+            <span></span>
+            <i></i><i></i><i></i><i></i>
+            <b>FACE_ID <em data-ticket-id>000000</em></b>
+          </div>
+
+          <div class="ticket__identity">
+            <p>SUJETO REGISTRADO</p>
+            <h2 id="ticket-title" data-ticket-name>NOMBRE</h2>
+            <p data-ticket-instagram>@USUARIO</p>
+          </div>
+
+          <div class="ticket__details">
+            <div><span>FECHA</span><b>25 SEPTIEMBRE</b></div>
+            <div><span>HORA</span><b>7:30 PM</b></div>
+            <div class="ticket__address"><span>UBICACIÓN</span><b>Av. Piracantos, Parque de Poblamiento 2a. Secc, Parque de Poblamiento, 42088 Pachuca de Soto, Hgo.</b></div>
+          </div>
+
+          <footer class="ticket__footer">
+            <p>GUARDA ESTE BOLETO<br />TOMA SCREENSHOT</p>
+            <p data-ticket-code>PX-000000</p>
+          </footer>
+        </article>
+
+        <button class="close-ticket" id="close-ticket" type="button">CERRAR ×</button>
+      </div>
+    </dialog>
+  </body>
+</html>
