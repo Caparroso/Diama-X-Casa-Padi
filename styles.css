@@ -85,7 +85,7 @@ body.is-gated { overflow: hidden; }
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(247,184,219,.2), rgba(244,155,204,.48)),
-    url("./assets/anime-eyes-hd.png") center / cover no-repeat;
+    url("./assets/anime-eyes-hd.png?v=20260922-2") center / cover no-repeat;
   transition: opacity 480ms ease, visibility 480ms ease;
 }
 
