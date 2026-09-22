@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pre-registro para el evento del 25 de septiembre en Pachuca." />
+    <meta name="theme-color" content="#f3a7cf" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23f3a7cf'/%3E%3Ccircle cx='22' cy='34' r='8' fill='%231d1520'/%3E%3Ccircle cx='42' cy='34' r='8' fill='%231d1520'/%3E%3Ccircle cx='32' cy='19' r='6' fill='%231d1520'/%3E%3Ccircle cx='32' cy='47' r='3' fill='%23f6e34e'/%3E%3C/svg%3E"
+    />
+    <title>Pre-registro — 25 de septiembre</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="is-gated">
+    <div class="noise" aria-hidden="true"></div>
+    <audio id="ambient-audio" src="./assets/pachuca-loop.mp3" loop preload="auto" playsinline></audio>
+
+    <div class="access-gate" id="access-gate" role="dialog" aria-modal="true" aria-labelledby="access-gate-title">
+      <div class="access-gate__card">
+        <span class="access-gate__logo"><img src="./assets/diama-logo.png" alt="Diama." /></span>
+        <button id="enter-site" type="button">
+          <span id="access-gate-title">TOCA PARA ACCEDER AL REGISTRO</span>
+          <b aria-hidden="true">↗</b>
+        </button>
+      </div>
+    </div>
+
+    <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="true" hidden>SONIDO ON</button>
+
+    <main class="registration-shell">
+      <div class="bubble-field" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <section class="event-panel" aria-labelledby="lineup-title">
+        <div class="hero-art" aria-hidden="true">
+          <img src="./assets/anime-eyes-hd.png" alt="" />
+        </div>
+
+        <header class="event-meta">
+          <p>25 SEPTIEMBRE</p>
+          <p>7:30 PM</p>
+          <p class="status"><i></i> PRE-REGISTRO DISPONIBLE</p>
+        </header>
+
+        <div class="diama-logo">
+          <img src="./assets/diama-logo.png" alt="Diama." />
+        </div>
+
+        <div class="lineup">
+          <p class="micro-label">LINE UP</p>
+          <h1 id="lineup-title">
+            <span>LOOP3</span>
+            <span>L-JO</span>
+            <span>CTRL+ALT+SUPR</span>
+            <span>GRUPO PRECARIO</span>
+            <span class="lineup__b2b">ANDRESESTR3S <small>B2B</small> BREAKMAMI</span>
+            <span class="lineup__herza">HERZA</span>
+          </h1>
+        </div>
+
+        <address class="location">
+          <span>UBICACIÓN</span>
+          <a href="https://maps.app.goo.gl/KCuu53wuCjvHwqki8" target="_blank" rel="noopener noreferrer" aria-label="Abrir ubicación en Google Maps">
+            Av. Piracantos, Parque de Poblamiento 2a. Secc,<br />
+            Parque de Poblamiento, 42088 Pachuca de Soto, Hgo. <b aria-hidden="true">↗</b>
+          </a>
+        </address>
+      </section>
+
+      <section class="form-panel">
+        <div class="form-wrap">
+          <header class="form-header">
+            <p>25.09 · PACHUCA</p>
+            <h2>PRE-REGISTRO</h2>
+          </header>
+
+          <div class="prices" aria-label="Precios de acceso">
+            <p><strong>$80</strong><span>CON REGISTRO<br />PAGA EN PUERTA</span></p>
+            <p><strong>$100</strong><span>SIN REGISTRO<br />PAGA EN PUERTA</span></p>
+          </div>
+
+          <form id="registration-form" action="https://formspree.io/f/meaqdwqy" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Pre-registro 25 de septiembre" />
+            <input type="hidden" name="tipo_de_acceso" value="$80 con registro — pago en puerta" />
+            <div class="field">
+              <label for="name">NOMBRE</label>
+              <input id="name" name="name" type="text" autocomplete="name" required maxlength="60" placeholder="Escribe tu nombre" />
+              <span class="field__error" id="name-error"></span>
+            </div>
+
+            <div class="field">
+              <label for="instagram">INSTAGRAM</label>
+              <div class="instagram-field">
+                <span aria-hidden="true">@</span>
+                <input id="instagram" name="instagram" type="text" autocomplete="off" required maxlength="30" placeholder="usuario" aria-describedby="instagram-help instagram-error" />
+              </div>
+              <span class="field__help" id="instagram-help">Sin espacios y sin el símbolo @.</span>
+              <span class="field__error" id="instagram-error"></span>
+            </div>
+
+            <button type="submit">
+              <span>GENERAR BOLETO</span>
+              <b aria-hidden="true">↗</b>
+            </button>
+
+            <output class="form-status" id="form-status" role="status" aria-live="polite"></output>
+          </form>
+        </div>
+      </section>
+
+      <section class="kitty-panel" aria-label="Arte del evento">
+        <img src="./assets/angel-cat-hd.png" alt="Gatita angelical de tres ojos sobre fondo rosa" />
+      </section>
+    </main>
+
+    <dialog class="ticket-dialog" id="ticket-dialog" aria-labelledby="ticket-title">
+      <div class="ticket-stage">
+        <article class="ticket" id="ticket">
+          <div class="ticket__noise" aria-hidden="true"></div>
+          <header class="ticket__header">
+            <span class="ticket-logo"><img src="./assets/diama-logo.png" alt="Diama." /></span>
+            <p>$80 · PAGA EN PUERTA</p>
+          </header>
+
+          <div class="ticket__art" aria-hidden="true">
+            <img src="./assets/angel-cat-hd.png" alt="" />
+            <b>BOLETO <em data-ticket-id>000000</em></b>
+          </div>
+
+          <div class="ticket__identity">
+            <p>REGISTRO CONFIRMADO</p>
+            <h2 id="ticket-title" data-ticket-name>NOMBRE</h2>
+            <p data-ticket-instagram>@USUARIO</p>
+          </div>
+
+          <div class="ticket__details">
+            <div><span>FECHA</span><b>25 SEPTIEMBRE</b></div>
+            <div><span>HORA</span><b>7:30 PM</b></div>
+            <div class="ticket__address"><span>UBICACIÓN</span><b><a href="https://maps.app.goo.gl/KCuu53wuCjvHwqki8" target="_blank" rel="noopener noreferrer">Av. Piracantos, Parque de Poblamiento 2a. Secc, Parque de Poblamiento, 42088 Pachuca de Soto, Hgo. ↗</a></b></div>
+          </div>
+
+          <footer class="ticket__footer">
+            <p>TOMA SCREENSHOT<br />MUESTRA ESTE BOLETO<br />EN LA ENTRADA</p>
+            <p data-ticket-code>PX-000000</p>
+          </footer>
+        </article>
+
+        <button class="close-ticket" id="close-ticket" type="button">CERRAR ×</button>
+      </div>
+    </dialog>
+  </body>
+</html>
