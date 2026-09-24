@@ -85,7 +85,7 @@ body.is-gated { overflow: hidden; }
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(247,184,219,.2), rgba(244,155,204,.48)),
-    url("./assets/anime-eyes-hd.png?v=20260922-2") center / cover no-repeat;
+    url("./assets/anime-eyes-hd.png?v=20260924-1") center / cover no-repeat;
   transition: opacity 480ms ease, visibility 480ms ease;
 }
 
@@ -307,7 +307,9 @@ h1 > span:nth-child(3) { color: var(--green); -webkit-text-stroke: 1px rgba(8,12
 h1 > span:nth-child(4) { margin-left: 4%; }
 h1 > span:nth-child(5) { margin-top: .28em; font-size: .46em; line-height: .94; letter-spacing: -.04em; }
 
-.lineup__b2b small { display: inline-block; padding: .18em .32em; border-radius: 999px; color: #fff; background: var(--pink-hot); font-size: .38em; letter-spacing: 0; vertical-align: middle; }
+.lineup__precario { font-size: .5em; line-height: .95; letter-spacing: -.045em; }
+.lineup__b2b small,
+.lineup__precario small { display: inline-block; padding: .18em .32em; border-radius: 999px; color: #fff; background: var(--pink-hot); font-size: .38em; letter-spacing: 0; vertical-align: middle; }
 .lineup__herza { margin-top: .2em; color: var(--pink-hot); font-size: .5em; line-height: .92; letter-spacing: -.045em; }
 
 .location {
@@ -474,8 +476,10 @@ form > button b { display: grid; place-items: center; width: 42px; height: 42px;
   h1 { width: 100%; max-width: 100%; font-size: clamp(2.55rem, 12.7vw, 3.5rem); line-height: .78; }
   h1 > span:nth-child(2), h1 > span:nth-child(4) { margin-left: 0; }
   h1 > span:nth-child(3), h1 > span:nth-child(4) { font-size: .68em; line-height: .96; letter-spacing: -.058em; }
+  h1 > span.lineup__precario { width: 100%; font-size: .39em; line-height: 1; }
   h1 > span.lineup__b2b { width: 100%; font-size: .34em; line-height: 1; }
-  h1 > span.lineup__b2b small { font-size: .5em; }
+  h1 > span.lineup__b2b small,
+  h1 > span.lineup__precario small { font-size: .5em; }
   h1 > span.lineup__herza { font-size: .52em; line-height: .9; }
   .location { padding: .76rem .84rem; border-radius: 17px; font-size: .75rem; }
   .location br { display: none; }
